@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dilen De Silva — Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="index.html">
+      <span class="dot"></span><span class="full">Dilen&nbsp;De&nbsp;Silva</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-head">
+        <div>
+          <p class="eyebrow">Software Engineer</p>
+          <h1 class="display hero-title" style="margin-top:18px;">
+            Dilen<br><span class="accent">De Silva</span>
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="hero-figure">
+        <image-slot id="hero" placeholder="Drop a hero image — workspace, project, or portrait"></image-slot>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section section-line">
+    <div class="wrap">
+      <div class="lede reveal">
+        <div class="label">[ Intro ]</div>
+        <div>
+          <p>I'm a software engineer who likes untangling hard problems and the
+          math underneath them. <span class="muted">Lately I've been digging into
+          AI — and what it can build when you point it at something real.</span></p>
+          <div class="chips">
+            <span class="chip">Problem Solving</span>
+            <span class="chip">Mathematics</span>
+            <span class="chip">AI / ML</span>
+            <span class="chip">Android · Kotlin</span>
+            <span class="chip">Networking</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTED WORK -->
+  <section class="section section-line">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Selected Work</h2>
+        <a class="link" href="projects.html">All projects <span>→</span></a>
+      </div>
+
+      <div class="work">
+        <article class="work-item reveal">
+          <div class="work-num">001</div>
+          <div class="work-body">
+            <div class="work-text">
+              <h3>Pharmagotchi</h3>
+              <p>An Android app built in Kotlin and wired to OpenRouter to deliver
+              AI-powered health analysis — turning everyday inputs into clear,
+              personalized guidance.</p>
+              <div class="work-tags"><span>Kotlin</span><span>Android</span><span>OpenRouter</span><span>AI</span></div>
+            </div>
+            <div class="work-figure">
+              <image-slot id="home-proj-1" placeholder="Pharmagotchi screenshot"></image-slot>
+            </div>
+          </div>
+        </article>
+
+        <article class="work-item reveal">
+          <div class="work-num">002</div>
+          <div class="work-body">
+            <div class="work-text">
+              <h3>Smash Bros Super</h3>
+              <p>A local-hosted multiplayer PvP game built on object-oriented
+              principles, with networking that keeps cross-device play in sync.</p>
+              <div class="work-tags"><span>OOP</span><span>Networking</span><span>Multiplayer</span><span>Game</span></div>
+            </div>
+            <div class="work-figure">
+              <image-slot id="home-proj-2" placeholder="Smash Bros Super screenshot"></image-slot>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="wrap">
+      <p class="eyebrow" style="margin-bottom:26px;">Let's build something</p>
+      <h2>Got a hard<br>problem?</h2>
+      <div class="links">
+        <a class="btn solid" href="https://www.linkedin.com/in/dilend/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn" href="https://github.com/dilhrm" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn" href="projects.html">See projects</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="brand">Dilen<br>De&nbsp;Silva<span class="accent">.</span></div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+      </div>
+      <div class="footer-col">
+        <h4>Elsewhere</h4>
+        <a href="https://www.linkedin.com/in/dilend/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="https://github.com/dilhrm" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Dilen De Silva</span>
+      <span>Software Engineer</span>
+    </div>
+  </div>
+</footer>
+
+<script src="image-slot.js"></script>
+<script>
+  const io = new IntersectionObserver((es) => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.16 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
